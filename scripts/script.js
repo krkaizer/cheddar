@@ -15,9 +15,21 @@ let buttons = document.getElementsByClassName("product-button");
 for (let i = 0; i < buttons.length; i++) {
     buttons[i].onclick = function () {
         document.getElementById("order").scrollIntoView({behavior:"smooth"});
+        //заполнение формы
+        document.getElementById('burger').value = this.closest('.products-item').querySelector('.products-item-title').innerText;
     }
 }
 
+//движение
+document.getElementById('mainBurger').onmousemove = function (e) {
+    document.getElementById('mainBurger').style.transform = 'translate(-' + ((e.clientX * 0.3) / 8) + 'px, -' + ((e.clientY * 0.3) / 8) + 'px)';
+}
+
+document.getElementById('mainOrder').onmousemove = function (e) {
+    document.getElementById('mainOrder').style.transform = 'translate(-' + ((e.clientX * 0.3) / 8) + 'px, -' + ((e.clientY * 0.3) / 8) + 'px)';
+}
+
+//заказ
 let burger = document.getElementById("burger");
 let name = document.getElementById("name");
 let phone = document.getElementById("phone");

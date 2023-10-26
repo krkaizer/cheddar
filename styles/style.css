@@ -57,6 +57,7 @@ body {
 .main {
     background-image: url("../images/main_bg.png");
     background-position: top center;
+    background-repeat: no-repeat;
     overflow: hidden;
 }
 
@@ -157,6 +158,7 @@ body {
     background-image: url("../images/whybg.png");
     background-position: top center;
     background-size: initial;
+    background-repeat: no-repeat;
     padding-bottom: 180px;
 }
 
@@ -189,7 +191,8 @@ body {
     background-image: url("../images/burgers_bg.png");
     background-position: top center;
     background-size: 1400px;
-    padding-bottom: 180px;
+    padding-bottom: 250px;
+    background-repeat: repeat-y;
 }
 
 .products-items {
@@ -212,6 +215,11 @@ body {
 
 .products-item-image img {
     max-width: 100%;
+    transition: all .5s ease;
+}
+
+.products-item-image img:hover{
+    transform: scale(1.1);
 }
 
 .products-item-title {
@@ -260,6 +268,7 @@ body {
     background-repeat: no-repeat;
     padding-bottom: 180px;
     overflow: hidden;
+
 }
 
 .order .container {
@@ -270,7 +279,7 @@ body {
     position: absolute;
     top: 0;
     right: calc(100% - 764px);
-    z-index: -1;
+    /*z-index: -1;*/
 }
 
 .order-form {
